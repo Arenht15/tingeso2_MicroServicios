@@ -136,10 +136,12 @@ const Register = () => {
                 } else if (error.request) {
                     // La solicitud se hizo pero no se recibió respuesta
                     console.error("No se recibió respuesta:", error.request);
+                    console.log("No se recibio respuesta")
                 } else {
                     // Algo sucedió al configurar la solicitud
                     console.error("Error al registrar el usuario:", error.message);
                 }
+                console.log("Que pasooooo")
             });
     };
 
