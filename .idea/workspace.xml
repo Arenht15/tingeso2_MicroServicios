@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ea2e4ce8-0a26-4a38-b488-74b74fec593c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/SavingCapacity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/Solicitud.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Services/EvaluationServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Services/UserServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-credito/src/main/java/com/example/microServicio_credito/Controllers/ControllerSimulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-credito/src/main/java/com/example/microServicio_credito/Services/SimulacionCredito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Entities/SavingCapacity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Entities/Solicitud.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Repository/SavingCapacityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Repository/SolicitudRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Services/SavinCapacityServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Services/SolicitudServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Config-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config-Service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Config-Service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-User/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-User/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-credito/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-credito/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-credito/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-credito/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-seguimiento/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-seguimiento/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-solicitud/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2pVen8A7gSksLUI4tPxnWoDNMOk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/princ/Desktop/U/Repositories",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea2e4ce8-0a26-4a38-b488-74b74fec593c" name="Changes" comment="" />
+      <created>1732855833972</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732855833972</updated>
+      <workItem from="1732855835015" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
