@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/prestabanco/SavingCapacity")
-@CrossOrigin(origins = "*")
+@RequestMapping("/prestabanco/sc")
 public class savingCapacityController {
 
     @Autowired

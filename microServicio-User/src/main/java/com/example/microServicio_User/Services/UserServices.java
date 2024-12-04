@@ -49,4 +49,13 @@ public class UserServices {
     public User updateUser(User user) {
         return userRepository.save(user);
     }
+
+    public User getUserById(Long id) {
+        try{
+            User user = userRepository.findById(id).get();
+            return user;
+        }catch (Exception e){
+            return null;
+        }
+    }
 }

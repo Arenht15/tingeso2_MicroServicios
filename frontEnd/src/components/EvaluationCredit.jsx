@@ -4,6 +4,8 @@ import {useNavigate, useParams} from "react-router-dom";
 
 import creditServices from "../services/CreditServices.js";
 import savingCapacityServices from "../services/SavingCapacityServices.js";
+import solicitudServices from "../services/SolicitudServices.js";
+import evaluationServices from "../services/EvaluacionServices.js";
 
 const EvaluationCredit = () => {
     const { id } = useParams();
@@ -32,7 +34,7 @@ const EvaluationCredit = () => {
     const [identityFile, setIdentityFile] = React.useState(null);
 
     const init = () => {
-        creditServices.getCredit(id)
+        solicitudServices.getCredit(id)
             .then((response) => {
                 const credit = response.data;
                 if (credit) {
@@ -81,6 +83,7 @@ const EvaluationCredit = () => {
         e.preventDefault();
 
         const formData = new FormData();
+        console.log("id 1: ", id);
         formData.append("id", id);
         formData.append("Ingress", Ingress);
         formData.append("statusDicom", statusDicom);
@@ -98,40 +101,44 @@ const EvaluationCredit = () => {
         formData2.append("savingAmountAcum", MontoAcumulado);
 
         MontoAhorro.forEach((value) => {
-            formData2.append("MontoAhorro", value); // Esto envía múltiples parámetros con el mismo nombre
+            formData2.append("MontoAhorro", value);
         });
         AbonoAhorro.forEach((value) => {
-            formData2.append("AbonoAhorro", value); // Esto envía múltiples parámetros con el mismo nombre
+            formData2.append("AbonoAhorro", value);
         });
         RetiroAhorro.forEach((value) => {
-            formData2.append("RetiroAhorro", value); // Esto envía múltiples parámetros con el mismo nombre
+            formData2.append("RetiroAhorro", value);
         });
 
 
         savingCapacityServices.updateSavingCapacity(formData2)
             .then((response) => {
-                creditServices.evaluationCredit(formData)
+                solicitudServices.actualizarevaluacion(formData)
                     .then((response) => {
-                        console.log("Capacidad de ahorro actualizada correctamente", response.data);
-                        console.log("Crédito actualizado correctamente", response.data);
-                        navigate('/ListCredit');
+                        console.log("Capacidad de ahorro actualizada correctamente");
+                        console.log("Crédito actualizado correctamente");
+                        evaluationServices.evaluationSolicitud(id)
+                            .then((response) => {
+                                console.log("Solicitud evaluada correctamente");
+                                navigate('/ListCredit');
+                            }) .catch(error => {
+                            console.log("Se ha producido un error al intentar evaluar la solicitud", error);
+                        })
                     })
                     .catch((error) => {
                         console.log("Se ha producido un error al intentar actualizar la capacidad de ahorro o el crédito", error);
-                        console.log("FormData2: ", formData);
                     }
                 )
             })
             .catch((error) => {
                 console.log("Se ha producido un error al intentar actualizar la capacidad de ahorro o el crédito", error);
-                console.log("FormData2: ", formData2);
             });
     };
 
     const handleDocuemtation = () => {
-        creditServices.updateStatus(id)
+        evaluationServices.updateStatus(id)
             .then((response) => {
-                console.log("Estado de la solicitud actualizado correctamente", response.data);
+                console.log("Estado de la solicitud actualizado correctamente");
                 navigate('/ListCredit');
             })
             .catch((error) => {
@@ -148,29 +155,35 @@ const EvaluationCredit = () => {
             AhorroFile: credit.savingCapacityFile,
             identityFile: credit.identidadFile,
         };
-        console.log("Identidad: ", credit.identidadFile);
-        console.log("dicomFile: ", credit.histDicom);
+
         const fileBlobs = {};
 
         Object.keys(files).forEach(key => {
             if (files[key]) {
-                const byteCharacters = atob(files[key]);
-                const byteNumbers = new Array(byteCharacters.length);
-                for (let i = 0; i < byteCharacters.length; i++) {
-                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                try {
+                    const byteCharacters = atob(files[key]);
+                    const byteNumbers = new Array(byteCharacters.length);
+                    for (let i = 0; i < byteCharacters.length; i++) {
+                        byteNumbers[i] = byteCharacters.charCodeAt(i);
+                    }
+                    const byteArray = new Uint8Array(byteNumbers);
+                    const blob = new Blob([byteArray], { type: 'application/pdf' });
+                    fileBlobs[key] = blob;
+                } catch (error) {
+                    console.error(`Error converting file ${key}:`, error);
+                    fileBlobs[key] = null;
                 }
-                const byteArray = new Uint8Array(byteNumbers);
-                const blob = new Blob([byteArray], { type: 'application/pdf' });
-                fileBlobs[key] = blob;
+            } else {
+                fileBlobs[key] = null;
             }
         });
 
-        setIngressfile(fileBlobs.ingressFile || null);
-        setDicomfile(fileBlobs.dicomFile || null);
-        setPayFile(fileBlobs.payFile || null);
-        setDebs(fileBlobs.debs || null);
-        setAhorroFile(fileBlobs.AhorroFile || null);
-        setIdentityFile(fileBlobs.identityFile || null);
+        setIngressfile(fileBlobs.ingressFile);
+        setDicomfile(fileBlobs.dicomFile);
+        setPayFile(fileBlobs.payFile);
+        setDebs(fileBlobs.debs);
+        setAhorroFile(fileBlobs.AhorroFile);
+        setIdentityFile(fileBlobs.identityFile);
     };
 
     return(

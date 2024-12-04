@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/prestabanco/solicitud")
-@CrossOrigin(origins = "*")
 public class solicitudController {
 
     @Autowired
@@ -28,11 +27,10 @@ public class solicitudController {
             @RequestParam("cuota") Double cuota,
             @RequestParam("birthdate") String birthday,
             @RequestParam("Porcentaje") Double porcentaje,
-            @RequestParam("rut") String rut,
-            @RequestParam("idFile") byte[] identification){
+            @RequestParam("rut") String rut){
 
         Solicitud sol = serviceSolicitud.save(id_user, type, amount,
-                term, rate, cuota, birthday, porcentaje, rut, identification);
+                term, rate, cuota, birthday, porcentaje, rut);
         return ResponseEntity.ok(sol);
     }
     @PutMapping("/update")
@@ -53,6 +51,24 @@ public class solicitudController {
         Solicitud bandera = serviceSolicitud.updateSolicitud(id, ingress, statusDicom,
                 Seniority, IngressAcum, deudas, LaboralFile, dicomFile,
                 ingressFile, deudasFile, AhorroFile, TipoEmpleo, idSc);
+        return ResponseEntity.ok(bandera);
+    }
+    @PutMapping("/actualizarCredito")
+    public void EvaluarCredit(@RequestParam("id") Long id,
+                              @RequestParam("Ingress") Double ingress,
+                              @RequestParam("statusDicom") Integer statusDicom,
+                              @RequestParam("seniority") Integer Seniority,
+                              @RequestParam("ingressAcum") Double ingressAcum,
+                              @RequestParam("amountDebs") Double deudas,
+                              @RequestParam("years") Integer years,
+                              @RequestParam("typejob") Integer TipoEmpleo){
+
+        serviceSolicitud.actualizaSolicitud(id, ingress, statusDicom, Seniority, ingressAcum, deudas, years, TipoEmpleo);
+    }
+
+    @PutMapping("/updateStatus")
+    public ResponseEntity<Solicitud> updateStatus(@RequestBody Solicitud solicitud) {
+        Solicitud bandera = serviceSolicitud.updateStatus(solicitud);
         return ResponseEntity.ok(bandera);
     }
 

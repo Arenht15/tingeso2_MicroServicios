@@ -1,4 +1,4 @@
-package com.example.microServicio_User.Config;
+package com.example.microServicio_solicitud.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -6,8 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 @Configuration
-public class config {
+public class RestTemplateConfig {
+
     @Bean
     @LoadBalanced
-    public RestTemplate restTemplate() { return new RestTemplate(); }
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 }

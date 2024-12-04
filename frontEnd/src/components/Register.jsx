@@ -125,8 +125,14 @@ const Register = () => {
 
         userServices.save(formData)
             .then((response) => {
-                console.log("Usuario ha sido añadido.", response.data);
-                navigate("/");
+                console.log("data:", response);
+                if(response.data != ""){
+                    console.log("Usuario ha sido añadido.", response.data);
+                    navigate("/");
+                }else{
+                    alert("El rut ingresado ya existe")
+                    console.log("Error al registrar el usuario");
+                }
             })
             .catch((error) => {
                 if (error.response) {

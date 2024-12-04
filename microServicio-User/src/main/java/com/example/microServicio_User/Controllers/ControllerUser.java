@@ -9,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/prestabanco/user")
-@CrossOrigin(origins = "*")
 public class ControllerUser {
     @Autowired
     private UserServices userServices;
@@ -30,6 +29,12 @@ public class ControllerUser {
     @GetMapping("/SearchUser")
     public ResponseEntity<User> searchUser(@RequestParam String rut){
         User bandera = userServices.searchUser(rut);
+        return ResponseEntity.ok(bandera);
+    }
+
+    @GetMapping("/getbyid/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable Long id){
+        User bandera = userServices.getUserById(id);
         return ResponseEntity.ok(bandera);
     }
 }

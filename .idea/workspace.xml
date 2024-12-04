@@ -1,63 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea2e4ce8-0a26-4a38-b488-74b74fec593c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/SavingCapacity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/Solicitud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Services/EvaluationServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Services/UserServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-credito/src/main/java/com/example/microServicio_credito/Controllers/ControllerSimulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-credito/src/main/java/com/example/microServicio_credito/Services/SimulacionCredito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Entities/SavingCapacity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Entities/Solicitud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Repository/SavingCapacityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Repository/SolicitudRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Services/SavinCapacityServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Services/SolicitudServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Config-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config-Service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Config-Service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-Service/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="ea2e4ce8-0a26-4a38-b488-74b74fec593c" name="Changes" comment="xd2">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Controllers/evaluationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/config/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/Controllers/seguimientoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/Model/Solicitud.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/Services/SeguimientoServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/config/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/model/user.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/.env" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/EvaluationCredit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/EvaluationCredit.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/InitialForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/InitialForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/ListCredit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/ListCredit.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/Simulation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/Simulation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/StatusCredit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/StatusCredit.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/services/CreditServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/services/CreditServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/services/EvaluacionServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/services/EvaluacionServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/services/SavingCapacityServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/services/SavingCapacityServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/services/SolicitudServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/services/SolicitudServices.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/MicroServicioEvaluacionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/MicroServicioEvaluacionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/SavingCapacity.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/SavingCapacity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/Solicitud.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/Solicitud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Services/EvaluationServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Services/EvaluationServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/resources/bootstrap.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microServicio-User/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-User/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Config/config.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/config/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Controllers/ControllerUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Controllers/ControllerUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Services/UserServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microServicio-credito/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-credito/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-credito/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-credito/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-credito/src/main/java/com/example/microServicio_credito/Controllers/ControllerSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-credito/src/main/java/com/example/microServicio_credito/Controllers/ControllerSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microServicio-seguimiento/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-seguimiento/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-solicitud/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/MicroServicioSeguimientoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/MicroServicioSeguimientoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-seguimiento/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-solicitud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Controllers/savingCapacityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Controllers/savingCapacityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Controllers/solicitudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Controllers/solicitudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Services/SolicitudServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Services/SolicitudServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2pVen8A7gSksLUI4tPxnWoDNMOk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/princ/Desktop/U/Repositories",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/princ/Desktop/U/Repositories/Tingeso-Entrega-Monolitica/Tingeso_Entrega1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3483444&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ConfigServiceApplication">
+    <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Config.Service.ConfigServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.eureka.Service.EurekaServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.gateway.Service.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroServicioCreditoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="microServicio-credito" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.microServicio_credito.MicroServicioCreditoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroServicioEvaluacionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="microServicio-Evaluacion" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.microServicio_Evaluacion.MicroServicioEvaluacionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroServicioSeguimientoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="microServicio-seguimiento" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.microServicio_seguimiento.MicroServicioSeguimientoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroServicioSolicitudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="microServicio-solicitud" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.microServicio_solicitud.MicroServicioSolicitudApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroServicioUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="microServicio-User" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.microServicio_User.MicroServicioUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.MicroServicioEvaluacionApplication" />
+      <item itemvalue="Spring Boot.EurekaServiceApplication" />
+      <item itemvalue="Spring Boot.MicroServicioUserApplication" />
+      <item itemvalue="Spring Boot.MicroServicioSeguimientoApplication" />
+      <item itemvalue="Spring Boot.ConfigServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.MicroServicioCreditoApplication" />
+      <item itemvalue="Spring Boot.MicroServicioSolicitudApplication" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,10 +182,73 @@
       <option name="presentableId" value="Default" />
       <updated>1732855833972</updated>
       <workItem from="1732855835015" duration="13000" />
+      <workItem from="1733097335446" duration="3699000" />
+      <workItem from="1733101207733" duration="596000" />
+      <workItem from="1733163124437" duration="4649000" />
+      <workItem from="1733182558316" duration="6559000" />
+      <workItem from="1733243684090" duration="3260000" />
+      <workItem from="1733340957153" duration="6733000" />
     </task>
+    <task id="LOCAL-00001" summary="cambio gateway yaml">
+      <option name="closed" value="true" />
+      <created>1733098183904</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733098183904</updated>
+    </task>
+    <task id="LOCAL-00002" summary="actualización a puertos dinámicos">
+      <option name="closed" value="true" />
+      <created>1733098642121</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733098642121</updated>
+    </task>
+    <task id="LOCAL-00003" summary="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+      <option name="closed" value="true" />
+      <created>1733099502197</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733099502197</updated>
+    </task>
+    <task id="LOCAL-00004" summary="xd">
+      <option name="closed" value="true" />
+      <created>1733100532401</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733100532401</updated>
+    </task>
+    <task id="LOCAL-00005" summary="xd2">
+      <option name="closed" value="true" />
+      <created>1733100950238</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733100950238</updated>
+    </task>
+    <task id="LOCAL-00006" summary="xd2">
+      <option name="closed" value="true" />
+      <created>1733100967612</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733100967612</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cambio gateway yaml" />
+    <MESSAGE value="actualización a puertos dinámicos" />
+    <MESSAGE value="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" />
+    <MESSAGE value="xd" />
+    <MESSAGE value="xd2" />
+    <option name="LAST_COMMIT_MESSAGE" value="xd2" />
   </component>
 </project>

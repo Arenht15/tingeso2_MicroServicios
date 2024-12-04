@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {AppBar, Toolbar, Typography, Button, Box, Table} from '@mui/material';
 import creditServices from "../services/CreditServices.js";
+import solicitudServices from "../services/SolicitudServices.js";
 
 
 
@@ -10,7 +11,7 @@ const ListCredit = () => {
     const [credits, setCredits] = useState([]);
 
     const init = () => {
-        creditServices.getAll()
+        solicitudServices.getAll()
             .then((response) => {
                 console.log("Mostrando listado de Solicitudes.", response.data);
                 setCredits(response.data);

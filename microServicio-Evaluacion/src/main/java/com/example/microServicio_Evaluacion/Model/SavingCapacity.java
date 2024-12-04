@@ -11,9 +11,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SavingCapacity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true, nullable = false)
     private Long id;
     private Double ScAmount; // saving capacity of the user
     private Integer savingYears; // years of the saving capacity

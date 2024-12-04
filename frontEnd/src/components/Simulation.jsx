@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import creditServices from '../services/CreditServices.js';
+import userService from "../services/UserService.js";
 import {AppBar, Toolbar, Typography, Button, TextField, MenuItem, Box} from '@mui/material';
 import {useNavigate} from "react-router-dom";
 
@@ -17,7 +18,7 @@ const Simulation = () => {
 
     const existeRut = async (rut) => {
         try {
-            const response = await creditServices.validUser(rut);
+            const response = await userService.validUser(rut);
             setErrorRut(response.data);
             return response.data;
         } catch (e) {
@@ -32,7 +33,7 @@ const Simulation = () => {
             alert("Debe Registrarse para poder simular un credito");
             return;
         }
-        userServices.simulateCredit(type, amount, term, rate)
+        creditServices.simulateCredit(type, amount, term, rate)
             .then((response) => {
                 console.log("Monto simulado: ", response.data);
                 setSimulatedAmount(response.data);
@@ -121,7 +122,7 @@ const Simulation = () => {
                         style={{ backgroundColor: '#01B701' }}
                         fullWidth
                         onClick={(e) => getSimulatedAmount(type, amount, term, rate)}>
-                    Calcular Chile
+                    Calcular
                 </Button>
                 {showSimulatedAmount && (
                     <Typography variant="h6" style={{ marginTop: '20px', color: simulatedAmount !== 0.0 ? 'green' : 'red' }}>

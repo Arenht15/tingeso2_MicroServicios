@@ -21,7 +21,6 @@ const InitialForm = () => {
         try {
             const response = await userServices.validUser(rut);
             setErrorRut(response.data);
-            console.log("ErrorRutBack: ", response.data);
             return response.data;
         } catch (e) {
             console.log("No se pudo obtener el rut.", e);
@@ -31,7 +30,6 @@ const InitialForm = () => {
 
     const getSimulatedAmount = async (type, amount, term, rate) => {
         const isValidRut = await existeRut(rut);
-        console.log("ErrorRutkjhlh: ", ErrorRut);
         if (Object.keys(isValidRut).length === 0) {
             alert("Debe Registrarse para poder Solicitar un credito");
             return;
@@ -56,19 +54,15 @@ const InitialForm = () => {
                 formData.append("cuota", response.data);
                 formData.append("birthdate", isValidRut.birthdate);
                 formData.append("Porcentaje", porcentaje);
-                formData.append("idFile", isValidRut.identification);
-
                 solicitudServices.createCredit(formData)
                     .then((response) => {
                         console.log("Credito creado: ", response.data.id);
                         navigate(`/Form/${response.data.id}`);
                     })
                     .catch((e) => {
+                        console.log("data: ", response.data)
                         console.log("No se pudo crear el credito.", e);
                     })
-                    .catch((e) => {
-                        console.log("No se pudo obtener el monto simulado.", e);
-                    });
             })
             .catch(e => {
                 console.log("Error al simular el crédito: ", e);

@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/prestabanco/credito")
-@CrossOrigin(origins = "*")
 public class ControllerSimulation {
     @Autowired
     private SimulacionCredito serviceSimulation;

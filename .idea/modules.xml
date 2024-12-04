@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Config-data/Config-data.iml" filepath="$PROJECT_DIR$/../Config-data/Config-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontEnd/frontEnd.iml" filepath="$PROJECT_DIR$/frontEnd/frontEnd.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tingeso2_MicroServicios.iml" filepath="$PROJECT_DIR$/.idea/tingeso2_MicroServicios.iml" />
     </modules>
   </component>

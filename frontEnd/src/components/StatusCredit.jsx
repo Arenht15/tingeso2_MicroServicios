@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {AppBar, Toolbar, Typography, Button, Box, Table, TextField} from '@mui/material';
-import creditServices from "../services/CreditServices.js";
+import SeguimientoServices from "../services/SeguimientoServices.js";
 import userService from "../services/UserService.js";
 
 const StatusCredit = () => {
@@ -9,6 +9,7 @@ const StatusCredit = () => {
     const [credits, setCredits] = useState([]);
     const [rut, setRut] = useState("");
     const [showCosts, setShowCosts] = useState(null);
+    const [listaCostos, setListaCostos] = useState([]);
     const handleSearch = () => {
         if (!rut) {
             alert("Por favor, ingrese un RUT.");
@@ -21,7 +22,7 @@ const StatusCredit = () => {
                     alert("Usuario no encontrado");
                 } else {
                     console.log("Usuario encontrado", response.data);
-                    creditServices.searchCreditbyIdUser(response.data.id)
+                    SeguimientoServices.buscarSolicitudes(response.data.id)
                         .then((response) => {
                             console.log("Mostrando listado de Solicitudes.", response.data);
                             setCredits(response.data);
@@ -35,6 +36,16 @@ const StatusCredit = () => {
                 console.error(error);
             });
     };
+
+    const CalcularCostos = (id) => {
+        SeguimientoServices.calcularCostos(id)
+            .then((response) => {
+                setListaCostos(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
     return(
         <div>
             <AppBar position="fixed" style={{zIndex: 2, backgroundColor: '#17cb17'}}>
@@ -86,7 +97,10 @@ const StatusCredit = () => {
                                     <Button
                                         variant="contained"
                                         style={{ backgroundColor: '#0b8d0b', color: 'white', flex: 1 }}
-                                        onClick={() => setShowCosts(credit.id)}
+                                        onClick={() => {
+                                            setShowCosts(credit.id);
+                                            CalcularCostos(credit.id);
+                                        }}
                                         disabled={credit.aprovedApplication !== 1}
                                     >
                                         {credit.aprovedApplication === 1 ? "Ver Costos" : "No disponible"}
@@ -98,11 +112,11 @@ const StatusCredit = () => {
                                     <td colSpan="4">
                                         <Box style={{ padding: '10px', backgroundColor: '#f0f0f0',
                                             display: 'flex', justifyContent: 'space-around' }}>
-                                            <Typography variant="body1">Seguro de desgravamen: ${Math.floor(credit.creditLifeInsurance).toLocaleString('de-DE')}</Typography>
+                                            <Typography variant="body1">Seguro de desgravamen: ${Math.floor(listaCostos[0]).toLocaleString('de-DE')}</Typography>
                                             <Typography variant="body1">Seguro de incendio: $20.000</Typography>
-                                            <Typography variant="body1">Comision: ${Math.floor(credit.creditJob).toLocaleString('de-DE')}</Typography>
-                                            <Typography variant="body1">Costo Mensual: ${Math.floor(credit.costM).toLocaleString('de-DE')}</Typography>
-                                            <Typography variant="body1">Costo Total: ${Math.floor(credit.costT).toLocaleString('de-DE')}</Typography>
+                                            <Typography variant="body1">Comision: ${Math.floor(listaCostos[2]).toLocaleString('de-DE')}</Typography>
+                                            <Typography variant="body1">Costo Mensual: ${Math.floor(listaCostos[1]).toLocaleString('de-DE')}</Typography>
+                                            <Typography variant="body1">Costo Total: ${Math.floor(listaCostos[3]).toLocaleString('de-DE')}</Typography>
                                         </Box>
                                     </td>
                                 </tr>
@@ -134,7 +148,7 @@ const StatusCredit = () => {
                   .full-height {
                     min-height: 100vh;
                     display: flex;
-                    flex-direction: column; /* Cambiar a columna para que el AppBar esté arriba */
+                    flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     position: relative;
@@ -145,7 +159,6 @@ const StatusCredit = () => {
                       background-image: radial-gradient(circle, rgba(173, 255, 47, 0.3) 10%, rgba(255, 255, 255, 0) 15%);
                       background-size: 20px 20px;
                       background-color: white;
-                      overflow: hidden;
                   }
                 `}</style>
     </div>

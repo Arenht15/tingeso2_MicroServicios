@@ -16,6 +16,15 @@ const updateCredit = (formData) => {
     });
 }
 
+const actualizarevaluacion = (formData) => {
+    return httpClient.put('/prestabanco/solicitud/actualizarCredito', formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        },
+    });
+}
+
+
 const getAll = () => {
     return httpClient.get('/prestabanco/solicitud/getSolicitudes');
 }
@@ -33,5 +42,6 @@ export default {
     updateCredit,
     getAll,
     getCredit,
-    searchCreditbyIdUser
+    searchCreditbyIdUser,
+    actualizarevaluacion
 }

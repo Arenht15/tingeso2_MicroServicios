@@ -2,14 +2,35 @@ package com.example.microServicio_Evaluacion.Services;
 
 import com.example.microServicio_Evaluacion.Model.Solicitud;
 import com.example.microServicio_Evaluacion.Model.SavingCapacity;;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service
 public class EvaluationServices {
 
+    @Autowired
+    RestTemplate restTemplate;
+
+    public SavingCapacity searchSavingCapacity(Long id){
+        return restTemplate.getForObject("http://microServicio-solicitud/prestabanco/sc/searchSavingCapacity/" + id, SavingCapacity.class);
+    }
+
+    public Solicitud searchSolicitud(Long id){
+        return restTemplate.getForObject("http://microServicio-solicitud/prestabanco/solicitud/getSol/" + id, Solicitud.class);
+    }
+
+    public void saveSolicitud(Solicitud solicitud){
+        restTemplate.put("http://microServicio-solicitud/prestabanco/solicitud/updateStatus", solicitud, Solicitud.class);
+    }
+
+    public void PendingDocument(Long id){
+        Solicitud s = searchSolicitud(id);
+        s.setAprovedApplication(2);
+        saveSolicitud(s);
+    }
     public Boolean calculateSavingHistory(SavingCapacity sc){
         for (int i = 0; i < sc.getWithdrawalHistory().size(); i++) {
             if(sc.getSavingHistory().get(i) > 0.0){
@@ -149,14 +170,9 @@ public class EvaluationServices {
         }
         return c;
     }
-    public Integer calculateYears(LocalDate birthdate){
-        LocalDate now = LocalDate.now();
-        Integer years = now.getYear() - birthdate.getYear();
-        return years;
-    }
 
     public Solicitud SavingCapacity(Solicitud c) {
-        SavingCapacity sc = savingCapacityServices.searchSavingCapacity(c.getId_savingCapacity());
+        SavingCapacity sc = searchSavingCapacity(c.getId_savingCapacity());
         int ptj = 5;
         Double tenProcent = c.getAmount() * 0.1;
         if(sc.getScAmount() > tenProcent){
@@ -186,7 +202,8 @@ public class EvaluationServices {
         return c;
     }
 
-    public void calculateCredit(Solicitud c) {
+    public void calculateSolicitud(Long id) {
+        Solicitud c = searchSolicitud(id);
         c = feeIncome(c); // feeIncome evaluation
         c = creditHistory(c); // credit history evaluation
         c = WorkSituacion(c); // work situation evaluation
@@ -204,13 +221,12 @@ public class EvaluationServices {
                 && c.getAmountApproved() == 1
                 && c.getAprovedYears() == 1
                 && c.getAprovedSavingCapacity() == 1) {
-            Solicitud Final = c;//CalculateCost(c);
-            Final.setAprovedApplication(1);
-            //creditRepository.save(Final);
+            c.setAprovedApplication(1);
+            saveSolicitud(c);
 
         } else {
             c.setAprovedApplication(0);
-            //creditRepository.save(c);
+            saveSolicitud(c);
         }
     }
 }

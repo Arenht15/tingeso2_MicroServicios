@@ -2,10 +2,13 @@ package com.example.microServicio_solicitud.Services;
 
 import com.example.microServicio_solicitud.Entities.Solicitud;
 import com.example.microServicio_solicitud.Repository.SolicitudRepository;
+import com.example.microServicio_solicitud.model.user;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -15,6 +18,9 @@ import java.util.List;
 @Service
 public class SolicitudServices {
     @Autowired
+    RestTemplate restTemplate;
+
+    @Autowired
     private SolicitudRepository solicitudRepository;
 
     public List<Solicitud> getSolicitudes(){
@@ -22,7 +28,7 @@ public class SolicitudServices {
     }
     public Solicitud save(Long id_user, Integer type, Double amount, Integer term,
                                 Double rate, Double cuota, String birthday, Double porcentaje,
-                                String rut, byte[] identification){
+                                String rut) {
         Solicitud sol = new Solicitud();
         sol.setId_user(id_user);
         sol.setRut(rut);
@@ -32,7 +38,10 @@ public class SolicitudServices {
         sol.setRate(rate);
         sol.setCuota(cuota);
         sol.setYears(calculateYears(LocalDate.parse(birthday)));
-        sol.setIdentidadFile(identification);
+        user cliente = getUser(id_user);
+        System.out.println(cliente);
+        System.out.println(cliente.getIdentification());
+        sol.setIdentidadFile(cliente.getIdentification());
         sol.setPorcent(porcentaje);
         try {
             sol = solicitudRepository.save(sol);
@@ -74,6 +83,29 @@ public class SolicitudServices {
         }
     }
 
+    public void actualizaSolicitud(Long id, Double ingress, Integer statusDicom, Integer Seniority,
+                                   Double IngressAcum, Double deudas, Integer years, Integer TipoEmpleo){
+        Solicitud credit = searchSolicitud(id);
+        credit.setIngress(ingress);
+        credit.setStatusDicom(statusDicom);
+        credit.setSeniority(Seniority);
+        credit.setIngressAcum(IngressAcum);
+        credit.setAmountDebs(deudas);
+        credit.setTypeJob(TipoEmpleo);
+        credit.setYears(years);
+        solicitudRepository.save(credit);
+    }
+
+
+    public Solicitud updateStatus(Solicitud solicitud) {
+        try {
+            solicitudRepository.save(solicitud);
+            return solicitud;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     public Integer calculateYears(LocalDate birthdate){
         LocalDate now = LocalDate.now();
         return now.getYear() - birthdate.getYear();
@@ -89,5 +121,10 @@ public class SolicitudServices {
 
     public List<Solicitud> findSolicitudByUserId(Long userId){
         return solicitudRepository.findSolicitudsByUserId(userId);
+    }
+
+    public user getUser(Long id) {
+        System.out.println(id);
+        return restTemplate.getForObject("http://microServicio-User/prestabanco/user/getbyid/" + id, user.class);
     }
 }

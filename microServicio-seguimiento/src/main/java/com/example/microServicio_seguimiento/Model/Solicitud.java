@@ -1,4 +1,4 @@
-package com.example.microServicio_Evaluacion.Model;
+package com.example.microServicio_seguimiento.Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -57,5 +57,10 @@ public class Solicitud {
     private Integer aprovedSavingCapacity; // status of the saving capacity
 
     //status of the application
-    private Integer aprovedApplication;
+    //private Double creditLifeInsurance; // life insurance of the credit
+    //private Double creditJob; // job insurance of the credit
+    //private Double AdministrationCommission; // administration commission of the credit
+    //private Double costM; // Month cost of the credit
+    //private Double costT; // total cost of the credit
+    private Integer aprovedApplication; // status of the application
 }
