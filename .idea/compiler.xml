@@ -10,11 +10,9 @@
         <module name="eureka-service" />
         <module name="microServicio-Evaluacion" />
         <module name="config-service" />
-        <module name="microServicio-seguimiento" />
+        <module name="microServicio-User" />
         <module name="gateway-service" />
         <module name="microServicio-credito" />
-        <module name="microServicio-User" />
-        <module name="microServicio-solicitud" />
       </profile>
     </annotationProcessing>
   </component>

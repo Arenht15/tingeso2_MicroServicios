@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-solicitud-deployment
+  labels:
+    app: microservicio-solicitud-deployment
+spec:
+  selector:
+    matchLabels:
+      app: microservicio-solicitud-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: microservicio-solicitud-deployment
+    spec:
+      containers:
+        - name: microservicio-solicitud-service
+          image: arenht/microservicio-solicitud
+          ports:
+            - containerPort: 8091

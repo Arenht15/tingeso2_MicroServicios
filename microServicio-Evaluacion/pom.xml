@@ -90,6 +90,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>microServicio-Evaluacion</finalName>
     </build>
 
 </project>

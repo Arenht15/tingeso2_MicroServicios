@@ -90,6 +90,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>microServicio-User</finalName>
 	</build>
 
 </project>

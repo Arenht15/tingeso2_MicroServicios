@@ -4,50 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea2e4ce8-0a26-4a38-b488-74b74fec593c" name="Changes" comment="xd2">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Controllers/evaluationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/Controllers/seguimientoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/Model/Solicitud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/Services/SeguimientoServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/model/user.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="ea2e4ce8-0a26-4a38-b488-74b74fec593c" name="Changes" comment="modificando gateway del config data para kubernetes (cors)">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Config-Service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deployment/config-service-deployment-service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deployment/eureka-service-deployment-service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deployment/gateway-service-deployment-service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deployment/microservicio-user-db-deployment-service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deployment/microservicio-user-deployment-service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deployment/postgres-secrets.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-Service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-Service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-User/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microServicio-solicitud/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/.env" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/EvaluationCredit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/EvaluationCredit.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/InitialForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/InitialForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/ListCredit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/ListCredit.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/Simulation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/Simulation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/components/StatusCredit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/components/StatusCredit.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/services/CreditServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/services/CreditServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/services/EvaluacionServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/services/EvaluacionServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/services/SavingCapacityServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/services/SavingCapacityServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/src/services/SolicitudServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/src/services/SolicitudServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/MicroServicioEvaluacionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/MicroServicioEvaluacionApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/SavingCapacity.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/SavingCapacity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/Solicitud.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Model/Solicitud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Services/EvaluationServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/java/com/example/microServicio_Evaluacion/Services/EvaluationServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-Evaluacion/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Config-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-Service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-Service/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-Service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-Service/src/main/resources/bootstrap.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microServicio-User/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Config/config.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/config/RestTemplateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Controllers/ControllerUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Controllers/ControllerUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/src/main/java/com/example/microServicio_User/Services/UserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-credito/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-credito/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-credito/src/main/java/com/example/microServicio_credito/Controllers/ControllerSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-credito/src/main/java/com/example/microServicio_credito/Controllers/ControllerSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-seguimiento/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-seguimiento/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/MicroServicioSeguimientoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/java/com/example/microServicio_seguimiento/MicroServicioSeguimientoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-seguimiento/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-seguimiento/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microServicio-User/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-User/src/main/resources/bootstrap.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microServicio-solicitud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Controllers/savingCapacityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Controllers/savingCapacityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Controllers/solicitudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Controllers/solicitudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Services/SolicitudServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/microServicio-solicitud/src/main/java/com/example/microServicio_solicitud/Services/SolicitudServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -68,10 +48,16 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2pVen8A7gSksLUI4tPxnWoDNMOk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -84,6 +70,7 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/princ/Desktop/U/Repositories/Tingeso-Entrega-Monolitica/Tingeso_Entrega1&quot;,
@@ -96,6 +83,11 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.3483444&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RunDashboard">
@@ -187,7 +179,11 @@
       <workItem from="1733163124437" duration="4649000" />
       <workItem from="1733182558316" duration="6559000" />
       <workItem from="1733243684090" duration="3260000" />
-      <workItem from="1733340957153" duration="6733000" />
+      <workItem from="1733340957153" duration="13176000" />
+      <workItem from="1733417897754" duration="144000" />
+      <workItem from="1733418202959" duration="4694000" />
+      <workItem from="1733448910825" duration="714000" />
+      <workItem from="1733500317570" duration="981000" />
     </task>
     <task id="LOCAL-00001" summary="cambio gateway yaml">
       <option name="closed" value="true" />
@@ -237,7 +233,39 @@
       <option name="project" value="LOCAL" />
       <updated>1733100967612</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="modificando eureka del config data para kubernetes">
+      <option name="closed" value="true" />
+      <created>1733419256868</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733419256868</updated>
+    </task>
+    <task id="LOCAL-00008" summary="modificando gateway del config data para kubernetes">
+      <option name="closed" value="true" />
+      <created>1733420065113</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733420065113</updated>
+    </task>
+    <task id="LOCAL-00009" summary="modificando microServicio-User del config data para kubernetes">
+      <option name="closed" value="true" />
+      <created>1733420970979</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733420970979</updated>
+    </task>
+    <task id="LOCAL-00010" summary="modificando gateway del config data para kubernetes (cors)">
+      <option name="closed" value="true" />
+      <created>1733422617605</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733422617605</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +277,10 @@
     <MESSAGE value="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" />
     <MESSAGE value="xd" />
     <MESSAGE value="xd2" />
-    <option name="LAST_COMMIT_MESSAGE" value="xd2" />
+    <MESSAGE value="modificando eureka del config data para kubernetes" />
+    <MESSAGE value="modificando gateway del config data para kubernetes" />
+    <MESSAGE value="modificando microServicio-User del config data para kubernetes" />
+    <MESSAGE value="modificando gateway del config data para kubernetes (cors)" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificando gateway del config data para kubernetes (cors)" />
   </component>
 </project>

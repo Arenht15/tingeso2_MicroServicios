@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-user-deployment
+  labels:
+    app: microservicio-user-deployment
+spec:
+  selector:
+    matchLabels:
+      app: microservicio-user-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: microservicio-user-deployment
+    spec:
+      containers:
+        - name: microservicio-user-service
+          image: arenht/microservicio-user
+          ports:
+            - containerPort: 8090

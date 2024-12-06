@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tutorial</groupId>
-	<artifactId>microServicio-solicitud</artifactId>
+	<artifactId>microServicio-seguimiento</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>microServicio-seguimiento</name>
 	<description>Demo project for Spring Boot</description>
@@ -90,6 +90,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>microServicio-seguimiento</finalName>
 	</build>
 
 </project>
