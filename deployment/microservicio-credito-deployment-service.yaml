@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-credito-deployment
+  labels:
+    app: microservicio-credito-deployment
+spec:
+  selector:
+    matchLabels:
+      app: microservicio-credito-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: microservicio-credito-deployment
+    spec:
+      containers:
+        - name: microservicio-credito-service
+          image: arenht/microservicio-credito
+          ports:
+            - containerPort: 8094

@@ -39,8 +39,6 @@ public class SolicitudServices {
         sol.setCuota(cuota);
         sol.setYears(calculateYears(LocalDate.parse(birthday)));
         user cliente = getUser(id_user);
-        System.out.println(cliente);
-        System.out.println(cliente.getIdentification());
         sol.setIdentidadFile(cliente.getIdentification());
         sol.setPorcent(porcentaje);
         try {
@@ -124,7 +122,6 @@ public class SolicitudServices {
     }
 
     public user getUser(Long id) {
-        System.out.println(id);
         return restTemplate.getForObject("http://microServicio-User/prestabanco/user/getbyid/" + id, user.class);
     }
 }
