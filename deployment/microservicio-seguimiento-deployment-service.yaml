@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-seguimiento-deployment
+  labels:
+    app: microservicio-seguimiento-deployment
+spec:
+  selector:
+    matchLabels:
+      app: microservicio-seguimiento-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: microservicio-seguimiento-deployment
+    spec:
+      containers:
+        - name: microservicio-seguimiento-service
+          image: arenht/microservicio-seguimiento
+          ports:
+            - containerPort: 8093
