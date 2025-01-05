@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-232.9921.47">
-    <data-source name="microServicio-User-db@172.26.166.41" uuid="677e85d6-80bf-44f6-9bbd-fb921d7ef753">
+    <data-source name="microServicio-User-db@172.26.165.18" uuid="677e85d6-80bf-44f6-9bbd-fb921d7ef753">
       <database-info product="PostgreSQL" version="17.2 (Debian 17.2-1.pgdg120+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.2" exact-driver-version="42.7">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
@@ -11,6 +11,21 @@
       <schema-mapping>
         <introspection-scope>
           <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="microServicio-solicitud-bd@172.26.165.18" uuid="422e4f1b-8e2f-41c7-b1d7-711762cb6a04">
+      <database-info product="PostgreSQL" version="17.2 (Debian 17.2-1.pgdg120+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="17.2" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="microServicio-solicitud-bd">
             <node kind="schema" qname="@" />
           </node>
         </introspection-scope>
